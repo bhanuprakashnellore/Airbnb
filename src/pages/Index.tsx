@@ -1,12 +1,20 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useNavigate } from "react-router-dom";
+import Header from "@/components/Header";
+import CategoryFilter from "@/components/CategoryFilter";
+import PropertyGrid from "@/components/PropertyGrid";
 
 const Index = () => {
+  const navigate = useNavigate();
+
+  const handlePropertyClick = (propertyId: string) => {
+    navigate(`/property/${propertyId}`);
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      <CategoryFilter />
+      <PropertyGrid onPropertyClick={handlePropertyClick} />
     </div>
   );
 };
