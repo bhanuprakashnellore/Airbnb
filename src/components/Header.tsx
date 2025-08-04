@@ -10,24 +10,15 @@ const Header = () => {
           <h1 className="text-2xl font-bold text-primary">airbnb</h1>
         </div>
 
-        {/* Search Bar */}
-        <div className="hidden md:flex items-center border border-gray-300 rounded-full py-2 px-4 shadow-soft hover:shadow-card transition-shadow">
-          <div className="flex items-center space-x-6">
-            <button className="text-sm font-medium text-gray-800 hover:text-gray-600">
-              Anywhere
-            </button>
-            <div className="h-6 w-px bg-gray-300"></div>
-            <button className="text-sm font-medium text-gray-800 hover:text-gray-600">
-              Any week
-            </button>
-            <div className="h-6 w-px bg-gray-300"></div>
-            <button className="text-sm text-gray-600 hover:text-gray-800">
-              Add guests
-            </button>
-          </div>
-          <Button variant="default" size="sm" className="ml-4 rounded-full h-8 w-8 p-0">
-            <Search className="h-4 w-4" />
-          </Button>
+        {/* Search Bar - Hide on mobile, show SearchBar component on larger screens */}
+        <div className="hidden lg:block flex-1 max-w-2xl mx-8">
+          {/* This will be replaced with SearchBar component in pages */}
+        </div>
+
+        {/* Mobile Search Button */}
+        <div className="flex lg:hidden items-center border border-gray-300 rounded-full py-2 px-4 shadow-soft hover:shadow-card transition-shadow flex-1 max-w-xs mx-4">
+          <Search className="h-4 w-4 text-gray-400 mr-3" />
+          <span className="text-sm text-gray-600">Where to?</span>
         </div>
 
         {/* Right Menu */}

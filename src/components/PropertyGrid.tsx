@@ -181,17 +181,20 @@ interface PropertyGridProps {
 
 const PropertyGrid = ({ onPropertyClick }: PropertyGridProps) => {
   return (
-    <div className="px-6 py-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {properties.map((property) => (
+    <div className="w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {properties.map((property, index) => (
+          <div 
+            key={property.id}
+            className="animate-fade-in"
+            style={{ animationDelay: `${index * 100}ms` }}
+          >
             <PropertyCard
-              key={property.id}
               {...property}
               onClick={() => onPropertyClick?.(property.id)}
             />
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

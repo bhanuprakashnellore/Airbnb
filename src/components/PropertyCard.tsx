@@ -1,9 +1,10 @@
 import { Heart, Star } from "lucide-react";
 import { useState } from "react";
+import ImageCarousel from "./ImageCarousel";
 
 interface PropertyCardProps {
   id: string;
-  image: string;
+  image: string | string[];
   title: string;
   type: string;
   guests: number;
@@ -35,15 +36,21 @@ const PropertyCard = ({
 
   return (
     <div 
-      className="group cursor-pointer"
+      className="group cursor-pointer animate-fade-in hover-scale"
       onClick={onClick}
     >
-      <div className="relative aspect-square rounded-xl overflow-hidden mb-3">
-        <img 
-          src={image} 
-          alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-        />
+      <div className="relative mb-3">
+        {Array.isArray(image) ? (
+          <ImageCarousel images={image} title={title} />
+        ) : (
+          <div className="relative aspect-square rounded-xl overflow-hidden">
+            <img 
+              src={image} 
+              alt={title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        )}
         <button
           className="absolute top-3 right-3 p-2 rounded-full hover:scale-110 transition-transform"
           onClick={(e) => {
