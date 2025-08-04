@@ -5,6 +5,12 @@ import property3 from "@/assets/property3.jpg";
 import property4 from "@/assets/property4.jpg";
 import property5 from "@/assets/property5.jpg";
 import property6 from "@/assets/property6.jpg";
+import property7 from "@/assets/property7.jpg";
+import property8 from "@/assets/property8.jpg";
+import property9 from "@/assets/property9.jpg";
+import property10 from "@/assets/property10.jpg";
+import property11 from "@/assets/property11.jpg";
+import property12 from "@/assets/property12.jpg";
 
 const properties = [
   {
@@ -86,6 +92,86 @@ const properties = [
     rating: 4.9,
     reviews: 98,
     location: "Lake Tahoe, California",
+  },
+  {
+    id: "7",
+    image: property7,
+    title: "Luxury Downtown Penthouse",
+    type: "Entire apartment",
+    guests: 6,
+    bedrooms: 3,
+    bathrooms: 3,
+    price: 850,
+    rating: 4.9,
+    reviews: 45,
+    location: "Manhattan, New York",
+    isNew: true,
+  },
+  {
+    id: "8",
+    image: property8,
+    title: "Rustic Countryside Farmhouse",
+    type: "Entire house",
+    guests: 10,
+    bedrooms: 5,
+    bathrooms: 3,
+    price: 195,
+    rating: 4.8,
+    reviews: 132,
+    location: "Tuscany, Italy",
+  },
+  {
+    id: "9",
+    image: property9,
+    title: "Tropical Beach Bungalow",
+    type: "Entire bungalow",
+    guests: 4,
+    bedrooms: 2,
+    bathrooms: 2,
+    price: 380,
+    rating: 4.9,
+    reviews: 87,
+    location: "Bora Bora, French Polynesia",
+  },
+  {
+    id: "10",
+    image: property10,
+    title: "Industrial City Studio",
+    type: "Entire studio",
+    guests: 2,
+    bedrooms: 1,
+    bathrooms: 1,
+    price: 125,
+    rating: 4.6,
+    reviews: 213,
+    location: "Brooklyn, New York",
+  },
+  {
+    id: "11",
+    image: property11,
+    title: "Alpine Ski Chalet",
+    type: "Entire chalet",
+    guests: 8,
+    bedrooms: 4,
+    bathrooms: 3,
+    price: 520,
+    rating: 4.9,
+    reviews: 76,
+    location: "Chamonix, France",
+    isNew: true,
+  },
+  {
+    id: "12",
+    image: property12,
+    title: "Historic Victorian Mansion",
+    type: "Entire house",
+    guests: 12,
+    bedrooms: 6,
+    bathrooms: 4,
+    price: 680,
+    rating: 4.8,
+    reviews: 94,
+    location: "San Francisco, California",
   },
 ];
 
